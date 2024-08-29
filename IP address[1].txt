@@ -1,0 +1,366 @@
+Linux
+Netwroking
+Cloudcomputing fundamentels
+AWS
+DevOps
+_____________________________________________________
+Networking
+_____________________________________________________
+
+Netwrok : systems(laptops, desktops, server), cables, swithces, routers, IP address, Internet
+
+
+software company:
+            software project: developing team, testing team, opration team, production team, 
+
+
+AWS cloud : Datacenters-----connect---Create a Netwrok in cloud env..... (server, storage, security, monitoring)
+
+
+Create a Netwrok in aws cloud env.....
+
+
+Internet ?
+
+LAN/Private Network/.......in cloud we are called VPC
+
+IP Address (IPv4) and (IPv6)
+year 1982
+we have two types of addresses in our system
+IP address (logical address/unique address) 32 bits
+MAC address (phycial address/hardware address) 48 bits
+
+In IPv4 How many IP address are there
+ 32
+2 = 4294967296
+IP addressFormate: w.x.y.z
+/
+we have two IP versions (IPv4 and IPv6)
+
+example: 192.168.0.25
+How can i see my system IP address (ipconfig /ifconfig / ip addr)
+
+Desmile valus 
+
+IP address range is 0 to 255
+
+Five classes 
+class A		 0 to 127            18.138.248.1
+class B 	128 to 191           172.31.17.165
+class C 	192 to 223
+
+class D 	224 to 239
+class E 	240 to 255
+
+
+172.16.0.10
+
+
+
+
+
+10.0.25.12 class A
+49.205.251.114 Class A
+
+
+
+
+
+
+
+example:
+120.155.11.110 class A
+192.168.0.111 class C
+10.0.0.100
+172.16.0.15
+192.168.0.10
+121.140.155.123
+190.125.142.254
+
+
+we are using only 3 classess (A,B,C)
+0.0.0.0 to 127.255.255.255
+128.0.0.0 to 191.255.255.255
+192.0.0.0 to 223.255.255.255
+Remaing D and E we can use in multicosting and R&D
+
+computer
+
+
+
+
+
+10.0.0.1 10.0.0.2......10.0.0.255..10.0.1.1 class A
+192.168.0.105 class C
+172.16.0.100 class B
+
+10.0.0.0 (10.0.0.1 to 10.255.255.254) 10.255.255.255
+12.0.0.0 (12.0.0.1 to 12.255.255.254) 12.255.255.255
+
+
+10.0.0.1	10.0.0.2	10.0.0.3 ........10.0.0.255... 10.0.1.1	10.0.1.2 10.0.1.255
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+192.168.0.10
+
+
+
+
+11000000.10101000.00000000.00001010 (32 bits)
+
+192.168.0.10
+
+2 power 32 = 4294967296
+
+0,1 (Binary language)
+
+
+private IP address (free IP address)
+
+10.0.0.0 to 10.255.255.255 class A
+172.16.0.0 to 172.31.255.255 class B
+192.168.0.0 to 192.168.255.255 class C
+
+within the LAN/VPC
+public ip address are registered IPs
+
+
+
+netwrok
+Private ip address
+1000 server
+3000x1000=30,00000
+
+Few Ip address (free IP address) private netwrok
+
+Class A: 10.0.0.0 to 10.255.255.255
+Class B: 172.16.0.0 to 172.31.255.255
+Class C: 192.168.0.0 to 192.168.255.255
+
+Reserverd IP address
+
+127.0.0.0 to 127.255.255.255 (loopback IP address)
+169.254.0.0 to 169.254.255 (APIPA)
+
+Remaining all public IP Address 
+
+IP address assigin methods:
+
+	* Automatic/Dynamic/DHCP(router)
+        * Manual/Static method
+
+1000 computers/laptops
+
+	* Manual/static
+
+we can assign Ip address to servers (Manual)
+
+Network porttion and Host porttion
+
+IP address bits in IPv4 : 32
+
+		N H H H
+class A 	w.x.y.Z
+		10.0.0.0
+
+
+network bits : 8
+host bits : 24
+number of ip addresses in class A
+   H
+A=2-2 
+ =1,67,77,214
+
+		N N H H
+CLASS B 	w.x.y.z
+		172.16.0.14
+172.0.0.0/16
+
+
+host bits are 16
+network bits are 16
+
+
+
+   H
+B=2-2 
+=65534
+
+
+		N N N H
+CLASS C		w.x.y.z
+		192.168.1.124
+
+
+TCS:
+project : softind
+
+192.168.0.0/24 254 IP address
+classless (subneting and superneting)
+>=60000 requird ip address
+
+16 host bits but we have onely 8 bits
+192.168.0.0/16
+65534
+
+dev 4000
+test 4000
+pro 4000
+
+network bits are 24
+host btis are 8
+
+   H
+A=2-2 
+=254
+
+
+
+subnetmask
+class A 255.0.0.0
+class B 255.255.0.0
+class c  255.255.255.0
+
+IP address:10.0.0.100
+subnetmask:255.0.0.0
+
+172.16.0.11
+255.255.0.0
+
+192.168.0.111
+255.255.255.0
+
+
+Few Ip address (free IP address) private netwrok
+
+Class A: 10.0.0.0 to 10.255.255.255
+Class B: 172.16.0.0 to 172.31.255.255
+Class C: 192.168.0.0 to 192.168.255.255
+
+
+
+CIDR/classless method		
+
+
+192.168.0.0/16                  
+255.255.255.0
+/24 network bits 
+remaining bits are host bits 8+8
+254 ip address
+Required ip address 60,000 65536
+
+
+superneting and subneting (CIDR)
+FLSM and VLSM
+
+ H
+2  -2 >=60000
+required bits 16 but we have only 8 host bits
+what about remaing ?
+remaing bits we will collect form network bits
+
+total hosts bits 8+8=16
+remaing netwrok bits are 16
+
+Network 192.168.0.0/16
+11111111.11111111.00000000.0000000
+subnetmask: 255.255.0.0
+now we have 65534 ip address
+________________________________________
+
+
+class B 172.16.0.0/16
+subnetmask:255.255.0.0
+80000
+
+required ip address 60,000
+
+
+
+
+
+
+
+
+
+  H
+2-2=65,534
+
+
+
+
+
+
+
+
+
+
+
+
+30000
+192.168.0.0/24
+11111111.11111111.11111111.00000000
+255.255.255.0
+
+192.168.0.0/17
+11111111.11111111.10000000.00000000
+255.255.128.0
+
+
+
+
+
+
+ 
+		
+
+
+
+
+
+
+
+
+
+
+192.168.0.0/16 (network bits) remaingi 16 bits are called hosts bits
+by using hosts bits we will finding number ip address in our network
+2x2x2x2x2x2x2x2x2x2x2x2x2x2x2x2=65536 IP address
+
+192.168.0.0/24 (network bits) remaingi 8 bits are called hosts bits
+by using hosts bits we will finding number ip address in our network
+2x2x2x2x2x2x2x2=256 IP address
+
+192.168.0.0/20 (network bits) remaingi 12 bits are called hosts bits
+by using hosts bits we will finding number ip address in our network
+2 power 12 =4096 IP address
+
+
+
+
+
+
+
+
